@@ -176,39 +176,3 @@
      After removing all: {
      }
      */
-
-     /* ------------------------------------------------------------------------------------
-        Export dictionary/array to xml format
-     */
-     - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
-    
-    NSDictionary *birthday = @{@"Peter" : @"1997-01-03",
-                               @"Josh"  : @"1998-02-04",
-                               @"Mary"  : @"1999-03-05",
-                               @"Mike"  : @"2000-04-06",
-                               @"John"  : @"2001-05-07",
-                               };
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    NSURL *fileURL = [NSURL URLWithString:@"JSON" relativeToURL:[self JSONDataRecordsDirectory]];
-    [birthday writeToFile:[fileURL path] atomically:YES];
-    
-    }
-
-
-    - (NSURL *)applicationCacheDirectory {
-        return [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
-    }
-
-    - (NSURL *)JSONDataRecordsDirectory{
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSURL *url = [NSURL URLWithString:@"JSONRecords/" relativeToURL:[self applicationCacheDirectory]];
-        NSError *error = nil;
-        if (![fileManager fileExistsAtPath:[url path]]) {
-            [fileManager createDirectoryAtPath:[url path] withIntermediateDirectories:YES attributes:nil error:&error];
-        }
-        return url;
-    }
