@@ -1,6 +1,3 @@
-	/* ------------------------------------------------------------------------------------
-		变量的申明和赋值
-	 */
 
 	/* ------------------------------------------------------------------------------------
 		If statement
@@ -36,6 +33,36 @@
         // 60分以下为F
         NSLog(@"F");
     }
+
+
+    // A student receives 67
+    // Determines what is the letter grade
+    // A:  92 and above
+    // A-: 87(inclusive) above and below 92 eg: if (grade >= 87 AND grade < 92)
+    // B+: 82(inclusive) above and below 87
+    // B:  76(inclusive) above and below 82
+    // B-: 68(inclusive) above and below 76
+    // C+: 60(inclusive) above and below 68
+    // F:  below 60
+
+    // AND : &&
+
+    // Requirement: print a complete sentence declaring the student's numeric grade, and letter grade (NSLog).
+
+     NSInteger score = 96;
+     if (score >= 92) {
+     NSLog(@"Studnet receives numeric score: %li letter grade: A", score);
+     } else if (score >= 87 && score < 92) {
+     NSLog(@"Studnet receives numeric score: %li letter grade: A-", score);
+     }  else if (score >= 82 && score < 87) {
+     NSLog(@"Studnet receives numeric score: %li letter grade: B+", score);
+     } else if (score >= 76 && score < 82) {
+     NSLog(@"Studnet receives numeric score: %li letter grade: B", score);
+     } else if (score >= 60 && score < 68) {
+     NSLog(@"Studnet receives numeric score: %li letter grade: C+", score);
+     } else {
+     NSLog(@"Studnet receives numeric score: %li letter grade: F", score);
+     }
 
     /* ------------------------------------------------------------------------------------
 		Operator
@@ -130,6 +157,28 @@
 	- (NSString *) integerToString: (NSInteger) integer {
 	    return integer;
 	}
+
+     NSInteger x = 2;
+     NSInteger power = 16;
+     
+     // iterator
+     NSInteger i = 1;
+     while (i < power) {
+     x = x * 2;
+     NSLog(@"x = %li", x);
+     i = i + 1;
+     }
+     
+     
+     x = 2;
+     
+     // Define i as the counter/iterator
+     for (NSInteger i = 1; i < power; i++) {
+     x = x * 2;
+     NSLog(@"x = %li", x);
+     }
+     
+     NSLog(@"Power = %li", power);
 
     /* Euclid's method: finding max common divisor
      */
