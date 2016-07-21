@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Issac Newton</string>
+		<key>balance</key>
+		<integer>4312</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Leonardo</string>
+		<key>balance</key>
+		<integer>5000</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>James Cameron</string>
+		<key>balance</key>
+		<integer>5628542</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jack Ma</string>
+		<key>balance</key>
+		<integer>600000000000</integer>
+	</dict>
+</array>
+</plist>

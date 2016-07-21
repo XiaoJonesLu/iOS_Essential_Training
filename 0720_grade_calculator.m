@@ -13,7 +13,7 @@
 
 // Requirement: print a complete sentence declaring the student's numeric grade, and letter grade (NSLog).
 
-NSInteger score = 67;
+NSInteger score;
 if (score >= 92) {
     NSLog(@"Studnet receives numeric score: %li letter grade: A", score);
 } else if (score >= 87 && score < 92) {
@@ -22,6 +22,8 @@ if (score >= 92) {
     NSLog(@"Studnet receives numeric score: %li letter grade: B+", score);
 } else if (score >= 76 && score < 82) {
     NSLog(@"Studnet receives numeric score: %li letter grade: B", score);
+} else if (score >= 68 && score < 76) {
+    NSLog(@"Studnet receives numeric score: %li letter grade: B-", score);
 } else if (score >= 60 && score < 68) {
     NSLog(@"Studnet receives numeric score: %li letter grade: C+", score);
 } else {
